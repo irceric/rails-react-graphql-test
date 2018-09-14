@@ -1,0 +1,63 @@
+{
+  "name": "graphql-rails-blog",
+  "version": "1.0.0",
+  "description": "Blog App build with Rails 5, React and GraphQL",
+  "homepage": "https://github.com/MatthieuSegret/graphql-rails-blog",
+  "engines": {
+    "node": "9.2.0",
+    "npm": "5.5.1"
+  },
+  "author": "Matthieu Segret <matthieu.segret@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build-css": "node-sass --include-path node_modules/ --include-path src/ src/assets/stylesheets/scss -o src/assets/stylesheets/css",
+    "watch-css": "npm run build-css && node-sass --include-path node_modules/ --include-path src/ src/assets/stylesheets/scss -o src/assets/stylesheets/css --watch --recursive",
+    "start-js": "react-app-rewired start --scripts-version react-scripts-ts",
+    "start": "npm-run-all -p watch-css start-js",
+    "build": "npm run build-css && react-app-rewired build --scripts-version react-scripts-ts",
+    "test": "react-app-rewired test --scripts-version react-scripts-ts --env=jsdom"
+  },
+  "dependencies": {
+    "apollo-cache-inmemory": "^1.0.0",
+    "apollo-client": "^2.0.1",
+    "apollo-link": "^1.0.3",
+    "apollo-link-batch-http": "^1.0.1",
+    "apollo-link-context": "^1.0.0",
+    "apollo-link-dedup": "^1.0.2",
+    "apollo-link-error": "^1.0.0",
+    "apollo-link-state": "0.1.0",
+    "apollo-mutation-state": "^0.0.7",
+    "bulma": "^0.6.1",
+    "classnames": "^2.2.5",
+    "final-form": "1.3.5",
+    "font-awesome": "^4.7.0",
+    "graphql": "0.12.3",
+    "graphql-tag": "^2.5.0",
+    "moment": "2.20.0",
+    "react": "16.2.0",
+    "react-apollo": "2.0.4",
+    "react-dom": "16.2.0",
+    "react-final-form": "1.2.1",
+    "react-router-dom": "4.2.2",
+    "react-scripts-ts": "^2.8.0",
+    "shortid": "2.2.8",
+    "styled-components": "^3.4.6"
+  },
+  "devDependencies": {
+    "@types/classnames": "^2.2.3",
+    "@types/graphql": "^0.11.7",
+    "@types/node": "^8.5.1",
+    "@types/react": "^16.0.31",
+    "@types/react-dom": "^16.0.3",
+    "@types/react-router": "^4.0.19",
+    "@types/react-router-dom": "^4.2.3",
+    "@types/shortid": "^0.0.29",
+    "compression-webpack-plugin": "^1.0.1",
+    "node-sass": "^4.5.3",
+    "npm-run-all": "4.1.2",
+    "prettier": "1.9.2",
+    "react-app-rewired": "^1.3.5",
+    "tslint-config-prettier": "^1.6.0",
+    "typescript": "^2.6.2"
+  }
+}
