@@ -71,10 +71,6 @@
 
           woahstork$ rails db:migrate
 
-* Load sample records:
-
-          woahstork$ rails db:seed
-
 * Run the Rails server in development mode
 
           woahstork$ rails server
