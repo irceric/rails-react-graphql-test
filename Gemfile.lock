@@ -63,7 +63,7 @@ GEM
     ffi (1.9.18)
     globalid (0.4.0)
       activesupport (>= 4.2.0)
-    google-protobuf (3.4.1.1)
+    google-protobuf (3.19.2)
     graphiql-rails (1.4.5)
       rails
     graphql (1.7.4)
